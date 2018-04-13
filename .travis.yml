@@ -3,6 +3,6 @@
 #script:
 #  - xcodebuild -scheme Travis-CI -project Travis-CI.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build
 language: objective-c
-dist: osx
+group: enterprise
 xcode_project: Travis-CI.xcodeproj
 xcode_scheme: Travis-CI
