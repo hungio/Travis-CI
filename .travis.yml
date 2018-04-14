@@ -4,4 +4,5 @@
 #  - xcodebuild -scheme Travis-CI -project Travis-CI.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build
 language: objective-c
 script:
-  - xcpretty -project Travis-CI.xcodeproj -scheme Travis-CI -sdk iphonesimulator -destination 'flatform=iOS Simulator,name=iPhoneX,OS=latest' build
+  - xcodebuild -project Travis-CI.xcodeproj -scheme Travis-CI -sdk iphonesimulator build | xcpretty && exit ${PIPESTATUS[0]}
+
