@@ -4,4 +4,4 @@
 #  - xcodebuild -scheme Travis-CI -project Travis-CI.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build
 language: objective-c
 script:
-  - xcodebuild -project Travis-CI.xcodeproj -scheme Travis-CI -sdk iphonesimulator clean build
+  - xset -o pipefail && codebuild -project Travis-CI.xcodeproj -scheme Travis-CI -sdk iphonesimulator clean build | xcpretty
